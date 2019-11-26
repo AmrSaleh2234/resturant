@@ -49,6 +49,12 @@ public class Text2 implements Serializable  {
        student c=new student(20180402, 3.4);
         student l=new student(2018042, 44.2);
         c.add();
+        l.add();
+        ArrayList<student>k=c.list();
+       for(student b:k)
+       {
+           System.out.println(b.getId()+" "+b.getGPA());
+       }
 //       filemanagement f=new filemanagement();
 //       f.write("student.bin", l);
 //        ArrayList<student> m= (ArrayList<student>) f.read("student.bin");

@@ -24,12 +24,13 @@ public class filemanagement implements Serializable{
     }
 public ArrayList<Object> read(String filepath) {
    
-       ArrayList<Object> x = null;
-  
+       ArrayList<student> x = new ArrayList<student>() ;
+        
+         
      ObjectInputStream file;
      try{
          file=new ObjectInputStream(new FileInputStream(filepath));
-        x =(ArrayList<Object>)file.readObject();
+        x =(ArrayList<student>) file.readObject();
         file.close();
          
      }
@@ -38,7 +39,11 @@ public ArrayList<Object> read(String filepath) {
               {
               System.out.println(e);
               }
-        return x;
+        return (ArrayList<Object>)(Object) x;
+         
+        
+       
+         
 }
 }
 
